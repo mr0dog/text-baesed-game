@@ -12,7 +12,7 @@ int main() {
 		switch (room) {
 		case 0:
 			cout << "you are in room 0 you can go (n)orth or (s)outh" << endl;
-			cin >> input; 
+			cin >> input;
 			if (input == 'n' || input == 'N')
 				room = 1;
 			else if (input == 's' || input == 'S')
@@ -27,7 +27,7 @@ int main() {
 				room = 0;
 			else if (input == 'e' || input == 'E')
 				room = 3;
-			else 
+			else
 				cout << "not an option, sorry" << endl;
 			break;
 		case 2:
@@ -61,9 +61,9 @@ int main() {
 				cout << "not an option, sorry" << endl;
 			break;
 		case 6:
-			cout << "you are in room 6 you can go (n)orth or (s)outh" << endl;
+			cout << "you are in room 6 you can go (e)ast or (s)outh" << endl;
 			cin >> input;
-			if (input == 'n' || input == 'N')
+			if (input == 'e' || input == 'E')
 				room = 7;
 			else if (input == 's' || input == 'S')
 				room = 4;
@@ -71,11 +71,11 @@ int main() {
 				cout << "not an option, sorry" << endl;
 			break;
 		case 7:
-			cout << "you are in room 7 you can go (e)ast or (s)outh" << endl;
+			cout << "you are in room 7 you can go (e)ast or (w)est" << endl;
 			cin >> input;
 			if (input == 'e' || input == 'E')
 				room = 8;
-			else if (input == 's' || input == 'S')
+			else if (input == 'w' || input == 'W')
 				room = 6;
 			else
 				cout << "not an option, sorry" << endl;
@@ -91,12 +91,22 @@ int main() {
 				cout << "not an option, sorry" << endl;
 			break;
 		case 8:
-			cout << "you are in room 8 you can go (e)ast or (w)est" << endl;
+			cout << "you are in room 8 you can go (n)orth or (w)est" << endl;
 			cin >> input;
-			if (input == 'e' || input == 'E')
+			if (input == 'n' || input == 'N')
 				room = 9;
 			else if (input == 'w' || input == 'W')
 				room = 7;
+			else
+				cout << "not an option, sorry" << endl;
+			break;
+		case 9:
+			cout << "you are in room 9 you can go (s)outh or (w)est" << endl;
+			cin >> input;
+			if (input == 's' || input == 'S')
+				room = 8;
+			else if (input == 'w' || input == 'W')
+				room = 5;
 			else
 				cout << "not an option, sorry" << endl;
 			break;
